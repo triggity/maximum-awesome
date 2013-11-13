@@ -10,14 +10,70 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+ " let Vundle manage Vundle
+ " required!
+Bundle 'gmarik/vundle'
+Bundle 'Lokaltog/vim-distinguished'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'austintaylor/vim-indentobject'
+Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'gmarik/vundle'
+Bundle 'juvenn/mustache.vim'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'kien/ctrlp.vim'
+Bundle 'leafgarland/typescript-vim'
+Bundle 'majutsushi/tagbar'
+Bundle 'mileszs/ack.vim'
+" Bundle 'msanders/snipmate.vim'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'nono/vim-handlebars'
+" Bundle 'pangloss/vim-javascript'
+" Bundle 'rmanalan/jshint.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'slim-template/vim-slim'
+Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-pastie'
+Bundle 'tpope/vim-ragtag'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-vividchalk'
+Bundle 'uarun/vim-protobuf'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'vim-scripts/Align'
+Bundle 'vim-scripts/greplace.vim'
+Bundle 'vim-scripts/kwbdi.vim'
+Bundle 'vim-scripts/matchit.zip'
+
+ "
+ " Brief help
+ " :BundleList          - list configured bundles
+ " :BundleInstall(!)    - install(update) bundles
+ " :BundleSearch(!) foo - search(or refresh cache first) for foo
+ " :BundleClean(!)      - confirm(or auto-approve) removal of unused
+ " bundles
+ " 
+ " see :h vundle for more details or wiki for FAQ
+ " NOTE: comments after Bundle command are not allowed..
+ "
+
+
 " install Vundle bundles
-if filereadable(expand("~/.vimrc.bundles"))
-  source ~/.vimrc.bundles
-  source ~/.vimrc.bundles.local
-endif
+" if filereadable(expand("~/.vimrc.bundles"))
+"   source ~/.vimrc.bundles
+"   source ~/.vimrc.bundles.local
+" endif
 
 " ensure ftdetect et al work by including this after the Vundle stuff
 filetype plugin indent on
+
 
 set autoindent
 set autoread                                                 " reload files when changed on disk, i.e. via `git checkout`
@@ -32,7 +88,7 @@ set incsearch                                                " search as you typ
 set laststatus=2                                             " always show statusline
 set list                                                     " show trailing whitespace
 set listchars=tab:▸\ ,trail:▫
-set number                                                   " show line numbers
+" set number                                                   " show line numbers
 set ruler                                                    " show where you are
 set scrolloff=3                                              " show context above/below cursorline
 set shiftwidth=2                                             " normal mode indentation commands use 2 spaces
@@ -43,6 +99,8 @@ set tabstop=8                                                " actual tabs occup
 set wildignore=log/**,node_modules/**,target/**,tmp/**,*.rbc
 set wildmenu                                                 " show a navigable menu for tab completion
 set wildmode=longest,list,full
+set hlsearch                                                 " highlights all on search
+set rnu                                                      " relative line numbers
 
 " Enable basic mouse behavior such as resizing buffers.
 set mouse=a
@@ -121,3 +179,14 @@ if filereadable(expand("~/.vimrc.local"))
   " noremap! jj <ESC>
   source ~/.vimrc.local
 endif
+" syntax enable
+" colorscheme solarized
+" set background="dark"
+
+
+set background=dark
+" solarized options 
+" let g:solarized_termcolors = 256
+" let g:solarized_visibility = "high"
+" let g:solarized_contrast = "high"
+colorscheme distinguished
