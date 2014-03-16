@@ -9,6 +9,7 @@ peace-loving hippies. Built for Mac OS X.
 * [iTerm 2](http://www.iterm2.com/)
 * [tmux](http://tmux.sourceforge.net/)
 * Awesome syntax highlighting with the [Solarized color scheme](http://ethanschoonover.com/solarized)
+* Want to know more? [Fly Vim, First Class](http://corner.squareup.com/2013/08/fly-vim-first-class.html)
 
 ### vim
 
@@ -32,11 +33,28 @@ peace-loving hippies. Built for Mac OS X.
 * `prefix v` makes a vertical split
 * `prefix s` makes a horizontal split
 
+If you have three or more panes:
+* `prefix +` opens up the main-horizontal-layout
+* `prefix =` opens up the main-vertical-layout
+
+You can adjust the size of the smaller panes in `tmux.conf` by lowering or increasing the `other-pane-height` and `other-pane-width` options.
+
 ## Install
 
     rake
 
-## Contributing
+## Customize
+In your home directory, Maximum Awesome creates a `.vimrc.local` file where you can customize
+Vim to your heart’s content. However, we’d love to incorporate your changes and improve Vim
+for everyone, so feel free to fork Maximum Awesome and open some pull requests!
+
+## Uninstall
+
+    rake uninstall
+
+Note that this won't remove everything, but your vim configuration should be reset to whatever it was before installing. Some uninstallation steps will be manual.
+
+## Contribute
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
